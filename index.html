@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio Tailwind CSS</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./assets/output.css">
   </head>
 
   <body
-    class="bg-sky-900 max-w-xl mx-auto border border-black min-h-dvh bg-gradient-to-b from-black via-sky-950 to-gray-800"
+    class="bg-sky-900 max-w-xl mx-auto border border-black min-h-dvh bg-gradient-to-b from-black via-sky-950 to-gray-800 text-white"
   >
-    <header class="text-white flex flex-col justify-center">
+    <header class="flex flex-col mb-8 z-10">
       <img
         src="./assets/fondo-github.jpg"
         alt="soy yo"
         class="m-auto h-[50vh] mask-radial-at-center mask-radial-from-50% mask-radial-to-70%"
       />
-      <span class="flex justify-center text-sky-400 text-xl">@Aaron-GF</span>
+      <span
+        class="text-sky-400 text-xl px-3 py-1 font-mono border border-sky-500/50 rounded-full m-auto shadow-sm bg-black/60 flex items-center cursor-crosshair -mt-4"
+        >@Aaron-GF
+        <svg
+          class="ml-1 inline w-5 h-5 text-sky-400"
+          aria-hidden="true"
+          fill="currentColor"
+        >
+          <use xlink:href="./assets/sprite.svg#verified" />
+        </svg>
+      </span>
       <h1 class="text-center text-3xl font-extrabold leading-tight mt-1">
         Aarón García Fernández
       </h1>
@@ -25,7 +34,7 @@
     <section class="flex gap-2 justify-center">
       <!-- Twitch -->
       <a
-        class="bg-purple-100 p-2 size-12 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-purple-100 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
         href="https://twitch.tv"
         target="_blank"
         aria-label="Twitch"
@@ -37,7 +46,7 @@
       </a>
       <!-- Youtube -->
       <a
-        class="bg-red-100 p-2 size-12 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-red-100 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
         href="https://youtube.com"
         target="_blank"
         aria-label="YouTube"
@@ -49,7 +58,7 @@
       </a>
       <!-- Github -->
       <a
-        class="bg-zinc-900 p-2 size-12 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-zinc-900 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
         href="https://github.com"
         target="_blank"
         aria-label="GitHub"
@@ -61,7 +70,7 @@
       </a>
       <!-- Linkedin -->
       <a
-        class="bg-blue-100 p-2 size-12 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-blue-100 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
         href="https://linkedin.com"
         target="_blank"
         aria-label="LinkedIn"
@@ -73,7 +82,7 @@
       </a>
       <!-- X (Twitter) -->
       <a
-        class="bg-black p-2 size-12 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-black p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
         href="https://x.com"
         target="_blank"
         aria-label="X"
@@ -85,7 +94,7 @@
       </a>
       <!-- Instagram -->
       <a
-        class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-2 size-12 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
         href="https://instagram.com"
         target="_blank"
         aria-label="Instagram"
@@ -97,7 +106,14 @@
       </a>
     </section>
 
-    <main class="text-white">Aquí van los cursos</main>
-    <footer class="text-white">Desarrollado con 💙 por Aaron-GF</footer>
+    <p class="text-center mt-4 text-sm">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates aut
+      ipsa tempore ad quis assumenda reiciendis harum distinctio dolorum? Veniam
+      maiores quasi voluptas perferendis quidem aspernatur deleniti fuga,
+      asperiores nemo.
+    </p>
+
+    <main class="">Aquí van los cursos</main>
+    <footer class="">Desarrollado con 💙 por Aaron-GF</footer>
   </body>
 </html>
