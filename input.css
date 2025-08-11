@@ -1,2 +1,15 @@
 @import "tailwindcss";
 
+@plugin "@midudev/tailwind-animations";
+
+@theme {
+  --color-primary: #09f;
+  --color-primary-light: #ceecff;
+
+  /* Animación rotación infinita */
+  --animate-spin-slow: spin 10s linear infinite;
+}
+
+.social-button {
+  @apply p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform;
+}

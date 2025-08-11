@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio Tailwind CSS</title>
-    <link rel="stylesheet" href="./assets/output.css">
+    <link rel="stylesheet" href="./assets/output.css" />
   </head>
 
   <body
-    class="bg-sky-900 max-w-xl mx-auto border border-black min-h-dvh bg-gradient-to-b from-black via-sky-950 to-gray-800 text-white"
+    class="bg-sky-900 max-w-xl min-w-2/3 mx-auto min-h-dvh bg-gradient-to-b from-black via-sky-950 to-gray-800 text-white flex flex-col gap-5"
   >
     <header class="flex flex-col mb-8 z-10">
       <img
         src="./assets/fondo-github.jpg"
         alt="soy yo"
-        class="m-auto h-[50vh] mask-radial-at-center mask-radial-from-50% mask-radial-to-70%"
+        class="m-auto h-[50vh] mask-radial-at-center mask-radial-from-50% mask-radial-to-70% animate-fade-in"
       />
       <span
         class="text-sky-400 text-xl px-3 py-1 font-mono border border-sky-500/50 rounded-full m-auto shadow-sm bg-black/60 flex items-center cursor-crosshair -mt-4"
@@ -34,7 +34,7 @@
     <section class="flex gap-2 justify-center">
       <!-- Twitch -->
       <a
-        class="bg-purple-100 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-purple-100 social-button animate-slide-up-fade"
         href="https://twitch.tv"
         target="_blank"
         aria-label="Twitch"
@@ -46,7 +46,7 @@
       </a>
       <!-- Youtube -->
       <a
-        class="bg-red-100 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-red-100 social-button animate-slide-up-fade animate-delay-100"
         href="https://youtube.com"
         target="_blank"
         aria-label="YouTube"
@@ -58,7 +58,7 @@
       </a>
       <!-- Github -->
       <a
-        class="bg-zinc-900 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-zinc-900 social-button animate-slide-up-fade animate-delay-200"
         href="https://github.com"
         target="_blank"
         aria-label="GitHub"
@@ -70,7 +70,7 @@
       </a>
       <!-- Linkedin -->
       <a
-        class="bg-blue-100 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-blue-100 social-button animate-slide-up-fade animate-delay-300"
         href="https://linkedin.com"
         target="_blank"
         aria-label="LinkedIn"
@@ -82,7 +82,7 @@
       </a>
       <!-- X (Twitter) -->
       <a
-        class="bg-black p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-black social-button animate-slide-up-fade animate-delay-400"
         href="https://x.com"
         target="_blank"
         aria-label="X"
@@ -94,7 +94,7 @@
       </a>
       <!-- Instagram -->
       <a
-        class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-2 size-12 sm:size-16 flex justify-center items-center rounded-full hover:scale-110 transition-transform"
+        class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 social-button animate-slide-up-fade animate-delay-500"
         href="https://instagram.com"
         target="_blank"
         aria-label="Instagram"
@@ -106,14 +106,97 @@
       </a>
     </section>
 
-    <p class="text-center mt-4 text-sm">
+    <p class="text-center mt-4 px-4 text-balance">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates aut
       ipsa tempore ad quis assumenda reiciendis harum distinctio dolorum? Veniam
       maiores quasi voluptas perferendis quidem aspernatur deleniti fuga,
       asperiores nemo.
     </p>
 
-    <main class="">Aquí van los cursos</main>
-    <footer class="">Desarrollado con 💙 por Aaron-GF</footer>
+    <main class="pt-4">
+      <div class="grid grid-cols-3 grid-rows-2 gap-2.5 w-full">
+        <!-- Curso React -->
+        <a
+          href="http://cursosreact.dev"
+          class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-500 border border-cyan-900 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 p-7 min-h-[180px] group"
+        >
+          <span class="absolute bottom-3 left-3 font-bold text-2xl"
+            >React.js</span
+          >
+          <svg
+            class="absolute -right-2 -bottom-2 size-30 group-hover:animate-spin-slow group-hover:scale-125 transition-transform"
+            width="100"
+            height="100"
+          >
+            <use xlink:href="./assets/sprite.svg#react" />
+          </svg>
+          <span
+            class="absolute top-3 left-3 border rounded-full px-2 py-0.5 bg-black/40"
+            >Curso de +14 clases</span
+          >
+        </a>
+        <!-- Curso HTML -->
+        <a
+          href="http://cursosreact.dev"
+          class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-orange-900 via-orange-600 to-orange-300 border border-orange-900 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-1 p-7 min-h-[180px] group"
+        >
+          <span class="absolute bottom-3 left-3 font-bold text-2xl z-10"
+            >HTML</span
+          >
+          <svg
+            class="absolute -right-2 -bottom-2 size-30 -rotate-6 group-hover:scale-125 transition-transform"
+            width="100"
+            height="100"
+          >
+            <use xlink:href="./assets/sprite.svg#html" />
+          </svg>
+          <span
+            class="absolute top-3 left-3 border rounded-full px-2 py-0.5 bg-black/40"
+            >Para principiantes</span
+          >
+        </a>
+        <!-- Curso CSS -->
+        <a
+          href="http://cursosreact.dev"
+          class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-purple-900 via-purple-600 to-purple-300 border border-purple-900 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-1 p-7 min-h-[180px] group"
+        >
+          <span class="absolute bottom-3 left-3 font-bold text-2xl z-10"
+            >CSS</span
+          >
+          <svg
+            class="absolute -right-2 -bottom-2 size-30 -rotate-6 group-hover:scale-125 transition-transform"
+            width="100"
+            height="100"
+          >
+            <use xlink:href="./assets/sprite.svg#css" />
+          </svg>
+          <span
+            class="absolute top-3 left-3 border rounded-full px-2 py-0.5 bg-black/40"
+            >Para principianes</span
+          >
+        </a>
+        <!-- Curso Node -->
+        <a
+          href="http://cursosreact.dev"
+          class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-green-900 via-green-700 to-green-500 border border-green-900 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 p-7 min-h-[180px] group"
+        >
+          <span class="absolute bottom-3 left-3 font-bold text-2xl z-10"
+            >Node.js</span
+          >
+          <svg
+            class="absolute -right-2 -bottom-2 size-30 -rotate-6 group-hover:scale-125 transition-transform"
+            width="100"
+            height="100"
+          >
+            <use xlink:href="./assets/sprite.svg#node" />
+          </svg>
+          <span
+            class="absolute top-3 left-3 border rounded-full px-2 py-0.5 bg-black/40"
+            >Curso de +14 clases</span
+          >
+        </a>
+      </div>
+    </main>
+    <footer class="text-center m-5">Desarrollado con 💙 por Aaron-GF</footer>
   </body>
 </html>
